@@ -1,0 +1,44 @@
+.container {
+  /* Setting display to grid */
+  display: grid;
+ /* Setting up rows and columns */
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(40px, auto);
+  grid-template-areas:
+    "hd hd hd hd"
+    "nav nav nav nav"
+    "card main main main"
+    "card main main main"
+    "ft ft ft ft";
+  gap: 15px;
+}
+
+/* Settings for Flexboxes for Blog Posts */
+
+.box {
+  max-width: 600px;
+  grid-area: main;
+  /* assigning flexbox */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  text-align: center;
+  position: relative;
+}
+
+/* Miscellaneous */
+
+.post-text {
+  text-align: left;
+}
+
+blockquote {
+  text-align: center;
+}
+
+#post-two {
+  text-align: left;
+}
